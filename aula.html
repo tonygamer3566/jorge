@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 08/11</title>
+</head>
+<body>
+    <div id="conteudo">
+        <h1>Você me ama?</h1>
+        <button id="sim">Sim</button>
+        <button id="nao">Não</button>
+        <div id="resposta"></div>
+        
+    </div>
+
+    <script>
+        let div = document.getElementById("conteudo")
+
+        async function buscarDados() {
+            let url = "https://rickandmortyapi.com/api/character"
+            let resposta = await fetch(url)
+            let dados = await resposta.json()        
+            let texto = json.stringify(body)
+            div.textContent = texto
+        }
+                
+        buscarDados();
+    </script>
+</body>
+</html>
+
+        
+            
+
